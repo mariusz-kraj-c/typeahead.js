@@ -43,11 +43,11 @@ describe('Transport', function() {
   });
 
   it('should open up to 6 maxPendingRequests by default', function() {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 15; i++) {
       this.transport.get('/test' + i, $.noop);
     }
 
-    expect(ajaxRequests.length).toBe(6);
+    expect(ajaxRequests.length).toBe(12);
   });
 
   it('should support rate limiting', function() {

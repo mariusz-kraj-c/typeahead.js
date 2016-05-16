@@ -19,7 +19,7 @@ var Transport = (function() {
 
     this.cancelled = false;
     this.lastReq = null;
-    this.maxPendingRequests = o.maxPendingRequests || 6;
+    this.maxPendingRequests = o.maxPendingRequests || 12;
 
     this._send = o.transport;
     this._get = o.limiter ? o.limiter(this._get) : this._get;
