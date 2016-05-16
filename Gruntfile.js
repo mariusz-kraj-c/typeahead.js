@@ -233,7 +233,7 @@ module.exports = function(grunt) {
     var curVersion = grunt.config.get('version');
 
     version = semver.inc(curVersion, version) || version;
-
+    
     if (!semver.valid(version) || semver.lte(version, curVersion)) {
       grunt.fatal('hey dummy, that version is no good!');
     }
